@@ -2,17 +2,45 @@ const authors = {
 
   author01: {
     name: "書き手A",
-    sns: "https://x.com/XXXXXXXX"
+
+    sns: [
+      {
+        name: "X",
+        url: "https://x.com/xxxxx"
+      },
+      {
+        name: "bsky",
+        url: "https://bsky.app/profile/xxxxx.bsky.social"
+      }
+    ]
   },
+
 
   author02: {
     name: "書き手B",
-    sns: "https://x.com/YYYYYYYY"
+
+    sns: [
+      {
+        name: "X",
+        url: "https://x.com/yyyyy"
+      },
+      {
+        name: "bsky",
+        url: "https://bsky.app/profile/yyyyy.bsky.social"
+      },
+    ]
   },
+
 
   author03: {
     name: "書き手C",
-    sns: "https://example.com/"
+
+    sns: [
+      {
+        name: "X",
+        url: "https://x.com/zzzzz"
+      }
+    ]
   }
 
 };

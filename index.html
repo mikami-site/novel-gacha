@@ -3,58 +3,83 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <title>悠アキSSガチャ</title>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet"
+        href="css/style.css">
 </head>
+
 
 <body>
 
   <main class="container">
 
+    <!-- ==========================
+         サイトタイトル
+    =========================== -->
+
     <header class="site-header">
-      <h1>悠アキSSガチャ</h1>
+
+      <h1>
+        悠アキSSガチャ
+      </h1>
 
       <p class="description">
-        ボタンを押すと、ランダムで1作品が表示されます<br>
+        ボタンを押すと、ランダムで1作品が表示されます。<br>
         テーマは「四季」<br>
-        様々な二人の季節を味わってください
+        二人が過ごす様々な季節を味わってください
       </p>
+
     </header>
 
 
+    <!-- ==========================
+         ガチャ
+    =========================== -->
+
     <section class="gacha-area">
 
-      <button id="gacha-button" class="gacha-button">
+      <button id="gacha-button"
+              class="gacha-button">
+
         ガチャを引く
+
       </button>
 
       <p class="count">
-        《参加者》※敬称略
-        小鶴サラ
-        かなめ
-        コメクレヒトモドキ
-        サエコ
-        志麻
-        ちくわ
-        ねり
-        花緒
-        英
-        ミヤコ
-        よさり
-        
-        深上
-
+        全14種
       </p>
+
+    </section>
+
+
+    <!-- ==========================
+         書き手一覧
+    =========================== -->
+
+    <section class="writers-section">
+
+      <h2 class="writers-title">
+        WRITERS
+      </h2>
+
+      <div id="writers-list"
+           class="writers-list">
+      </div>
 
     </section>
 
   </main>
 
 
+  <!-- 作者・作品データ -->
   <script src="js/data.js"></script>
+
+  <!-- ガチャ・書き手一覧表示 -->
   <script src="js/gacha.js"></script>
 
 </body>

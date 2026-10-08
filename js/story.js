@@ -183,9 +183,9 @@ else {
   // --------------------------------------
 
   document.getElementById(
-    "story-body"
-  ).innerHTML =
-    story.body;
+　  "story-body"
+　).textContent =
+　  story.body.trim();
 
 }
 

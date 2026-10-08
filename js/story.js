@@ -210,29 +210,100 @@ if (
     "click",
     function () {
 
-      // 現在表示中の作品を除外
-      const otherStories =
+      // ------------------------------------
+      // すでに引いた作品を取得
+      // ------------------------------------
+
+      let drawnStories =
+        JSON.parse(
+          sessionStorage.getItem("drawnStories")
+        ) || [];
+
+
+      // ------------------------------------
+      // 現在の作品も履歴に入れておく
+      // ------------------------------------
+
+      if (
+        !drawnStories.includes(storyId)
+      ) {
+
+        drawnStories.push(
+          storyId
+        );
+
+      }
+
+
+      // ------------------------------------
+      // 未抽選作品だけ取り出す
+      // ------------------------------------
+
+      let availableStories =
         stories.filter(
           item =>
-            item.id !== storyId
+            !drawnStories.includes(item.id)
         );
 
 
+      // ------------------------------------
+      // 全作品引き終わった場合
+      // 履歴をリセット
+      // ------------------------------------
+
+      if (
+        availableStories.length === 0
+      ) {
+
+        sessionStorage.removeItem(
+          "drawnStories"
+        );
+
+        drawnStories = [];
+
+        availableStories =
+          stories.filter(
+            item =>
+              item.id !== storyId
+          );
+
+      }
+
+
+      // ------------------------------------
       // ランダム抽選
+      // ------------------------------------
+
       const randomIndex =
         Math.floor(
           Math.random()
-          * otherStories.length
+          * availableStories.length
         );
 
 
       const selectedStory =
-        otherStories[
-          randomIndex
-        ];
+        availableStories[randomIndex];
 
 
-      // 選ばれた作品へ移動
+      // ------------------------------------
+      // 新しく引いた作品を記録
+      // ------------------------------------
+
+      drawnStories.push(
+        selectedStory.id
+      );
+
+
+      sessionStorage.setItem(
+        "drawnStories",
+        JSON.stringify(drawnStories)
+      );
+
+
+      // ------------------------------------
+      // 選ばれた作品へ
+      // ------------------------------------
+
       window.location.href =
         `story.html?id=${selectedStory.id}`;
 

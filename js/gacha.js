@@ -12,13 +12,75 @@ if (gachaButton) {
     "click",
     function () {
 
-      const randomIndex =
-        Math.floor(
-          Math.random() * stories.length
+      // ------------------------------------
+      // すでに引いた作品を取得
+      // ------------------------------------
+
+      const drawnStories =
+        JSON.parse(
+          sessionStorage.getItem("drawnStories")
+        ) || [];
+
+
+      // ------------------------------------
+      // まだ引いていない作品だけにする
+      // ------------------------------------
+
+      let availableStories =
+        stories.filter(
+          story =>
+            !drawnStories.includes(story.id)
         );
 
+
+      // ------------------------------------
+      // 全作品引き終わっていた場合
+      // 履歴をリセット
+      // ------------------------------------
+
+      if (availableStories.length === 0) {
+
+        sessionStorage.removeItem(
+          "drawnStories"
+        );
+
+        availableStories = stories;
+      }
+
+
+      // ------------------------------------
+      // ランダム抽選
+      // ------------------------------------
+
+      const randomIndex =
+        Math.floor(
+          Math.random()
+          * availableStories.length
+        );
+
+
       const selectedStory =
-        stories[randomIndex];
+        availableStories[randomIndex];
+
+
+      // ------------------------------------
+      // 引いた作品を履歴に追加
+      // ------------------------------------
+
+      drawnStories.push(
+        selectedStory.id
+      );
+
+
+      sessionStorage.setItem(
+        "drawnStories",
+        JSON.stringify(drawnStories)
+      );
+
+
+      // ------------------------------------
+      // 作品ページへ
+      // ------------------------------------
 
       window.location.href =
         `story.html?id=${selectedStory.id}`;

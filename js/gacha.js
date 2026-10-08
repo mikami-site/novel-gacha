@@ -1,26 +1,9 @@
-const gachaButton = document.getElementById("gacha-button");
-
-gachaButton.addEventListener("click", function () {
-
-  const randomIndex = Math.floor(
-    Math.random() * stories.length
-  );
-
-  const selectedStory = stories[randomIndex];
-
-  window.location.href =
-    `story.html?id=${selectedStory.id}`;
-
-});
 // ========================================
-// ガチャ
+// ガチャボタン
 // ========================================
 
 const gachaButton =
-  document.getElementById(
-    "gacha-button"
-  );
-
+  document.getElementById("gacha-button");
 
 if (gachaButton) {
 
@@ -28,25 +11,31 @@ if (gachaButton) {
     "click",
     function () {
 
+      // stories が存在するか確認
+      if (
+        typeof stories === "undefined" ||
+        stories.length === 0
+      ) {
+        alert("作品データを読み込めませんでした。");
+        return;
+      }
+
+      // ランダム抽選
       const randomIndex =
         Math.floor(
-          Math.random()
-          * stories.length
+          Math.random() * stories.length
         );
-
 
       const selectedStory =
         stories[randomIndex];
 
-
+      // 小説ページへ移動
       window.location.href =
         `story.html?id=${selectedStory.id}`;
-
     }
   );
 
 }
-
 
 
 // ========================================
@@ -54,38 +43,26 @@ if (gachaButton) {
 // ========================================
 
 const writersList =
-  document.getElementById(
-    "writers-list"
-  );
+  document.getElementById("writers-list");
 
+if (
+  writersList &&
+  typeof authors !== "undefined"
+) {
 
-if (writersList) {
-
-  // authorsの中身を順番に取得
   Object.values(authors).forEach(
     author => {
 
-      // ----------------------------
-      // 書き手1人分
-      // ----------------------------
-
       const writerItem =
-        document.createElement(
-          "div"
-        );
+        document.createElement("div");
 
       writerItem.className =
         "writer-item";
 
 
-      // ----------------------------
       // 書き手名
-      // ----------------------------
-
       const writerName =
-        document.createElement(
-          "p"
-        );
+        document.createElement("p");
 
       writerName.className =
         "writer-name";
@@ -93,20 +70,14 @@ if (writersList) {
       writerName.textContent =
         author.name;
 
-
       writerItem.appendChild(
         writerName
       );
 
 
-      // ----------------------------
       // SNS
-      // ----------------------------
-
       const snsArea =
-        document.createElement(
-          "div"
-        );
+        document.createElement("div");
 
       snsArea.className =
         "writer-sns";
@@ -120,26 +91,14 @@ if (writersList) {
         author.sns.forEach(
           (sns, index) => {
 
-            // 2つ目以降の前に区切り
             if (index > 0) {
-
-              const separator =
-                document.createTextNode(
-                  " / "
-                );
-
               snsArea.appendChild(
-                separator
+                document.createTextNode(" / ")
               );
-
             }
 
-
-            // SNSリンク
             const link =
-              document.createElement(
-                "a"
-              );
+              document.createElement("a");
 
             link.textContent =
               sns.name;
@@ -153,27 +112,18 @@ if (writersList) {
             link.rel =
               "noopener noreferrer";
 
-
-            snsArea.appendChild(
-              link
-            );
-
+            snsArea.appendChild(link);
           }
         );
-
       }
-
 
       writerItem.appendChild(
         snsArea
       );
 
-
       writersList.appendChild(
         writerItem
       );
-
     }
   );
-
 }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>特別小説 | 2ページ目</title>
+
+  <link rel="stylesheet"
+        href="css/style.css">
+
+
+  <script>
+    /*
+      年齢確認をしていない状態で
+      special2.html に直接来た場合は
+      special.html に戻す
+    */
+
+    if (
+      sessionStorage.getItem("ageConfirmed")
+      !== "yes"
+    ) {
+      window.location.replace("special.html");
+    }
+  </script>
+
+</head>
+
+
+<body>
+
+  <main class="container">
+
+    <article class="story">
+
+      <header class="story-header">
+
+        <h1>
+          特別小説タイトル
+        </h1>
+
+        <p class="story-page">
+          2 / 2
+        </p>
+
+      </header>
+
+
+      <section class="story-body">
+
+        <p>
+          　二ページ目の本文です。
+        </p>
+
+        <p>
+          「ここにも会話文」
+        </p>
+
+        <p>
+          　物語の続きを入れます。
+        </p>
+
+        <p>
+          　そして物語は終わった。
+        </p>
+
+      </section>
+
+
+      <nav class="story-navigation">
+
+        <a href="special.html"
+           class="page-button secondary">
+          ← 前のページへ
+        </a>
+
+      </nav>
+
+    </article>
+
+  </main>
+
+</body>
+
+</html>

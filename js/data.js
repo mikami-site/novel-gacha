@@ -11,7 +11,7 @@ const authors = {
       {
         name: "X",
         url: "https://x.com/ozuru523"
-      },
+      }
     ]
   },
 
@@ -23,7 +23,7 @@ const authors = {
       {
         name: "X",
         url: "https://x.com/1021_kaname"
-      }
+      },
       {
         name: "bsky",
         url: "https://bsky.app/profile/1021-kaname.bsky.social"
@@ -39,7 +39,7 @@ const authors = {
       {
         name: "X",
         url: "https://x.com/1021_kaname"
-      }
+      },
       {
         name: "bsky",
         url: "https://bsky.app/profile/1021-kaname.bsky.social"
@@ -54,7 +54,7 @@ const authors = {
       {
         name: "X",
         url: "https://x.com/saepon_p"
-      }
+      },
       {
         name: "bsky",
         url: "https://bsky.app/profile/saeko-gnsn.bsky.social"
@@ -69,7 +69,7 @@ const authors = {
       {
         name: "X",
         url: "https://x.com/sima_zzzhw"
-      }
+      },
       {
         name: "bsky",
         url: "https://bsky.app/profile/simazzz.bsky.social"
@@ -84,7 +84,7 @@ const authors = {
       {
         name: "X",
         url: "https://x.com/ckw_zzz"
-      }
+      },
       {
         name: "bsky",
         url: "https://bsky.app/profile/ckw-zzz.bsky.social"
@@ -99,7 +99,7 @@ const authors = {
       {
         name: "X",
         url: "https://x.com/GoYaflute"
-      }
+      },
       {
         name: "bsky",
         url: "https://bsky.app/profile/nerikirihonpo.bsky.social"
@@ -114,7 +114,7 @@ const authors = {
       {
         name: "X",
         url: "https://x.com/xxx"
-      }
+      },
       {
         name: "bsky",
         url: "https://bsky.app/profile/xxx.bsky.social"
@@ -162,7 +162,7 @@ const authors = {
       {
         name: "X",
         url: "https://x.com/mikaminzt"
-      }
+      },
       {
         name: "bsky",
         url: "https://bsky.app/profile/mikaminzt.bsky.social"

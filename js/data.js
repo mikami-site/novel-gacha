@@ -976,7 +976,7 @@ const stories = [
   {
     id: "12",
     title: "秋、夜の一時。",
-    theme: "テーマ12",
+    theme: "秋",
     author: "author11",
 
     body: `
@@ -1033,7 +1033,7 @@ const stories = [
 
   {
     id: "13",
-    title: "",
+    title: "未定",
     theme: "冬",
     author: "author12",
 
@@ -1044,7 +1044,7 @@ const stories = [
 
   {
     id: "14",
-    title: "",
+    title: "未定",
     theme: "夏",
     author: "author12",
 

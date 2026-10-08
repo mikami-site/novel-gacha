@@ -11,9 +11,9 @@ const declineButton =
   document.getElementById("age-decline");
 
 
-// ==============================
-// すでに確認済みかチェック
-// ==============================
+// ========================================
+// すでに年齢確認済みの場合
+// ========================================
 
 if (
   sessionStorage.getItem("ageConfirmed")
@@ -29,9 +29,9 @@ if (
 }
 
 
-// ==============================
+// ========================================
 // 18歳以上
-// ==============================
+// ========================================
 
 confirmButton.addEventListener(
   "click",
@@ -42,7 +42,8 @@ confirmButton.addEventListener(
       "yes"
     );
 
-    ageGate.style.display = "none";
+    ageGate.style.display =
+      "none";
 
     specialContent.classList.remove(
       "special-hidden"
@@ -52,20 +53,16 @@ confirmButton.addEventListener(
 );
 
 
-// ==============================
+// ========================================
 // 18歳未満
-// ==============================
+// ========================================
 
 declineButton.addEventListener(
   "click",
   function () {
 
-    /*
-      今回はサイトトップなどへ
-      戻す例
-    */
-
-    window.location.href = "index.html";
+    window.location.href =
+      "index.html";
 
   }
 );

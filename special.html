@@ -2,7 +2,6 @@
 <html lang="ja">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta name="viewport"
@@ -12,13 +11,52 @@
 
   <link rel="stylesheet"
         href="css/style.css">
-
 </head>
 
 
 <body>
 
-  <main class="container">
+  <!-- ==========================
+       年齢確認画面
+  =========================== -->
+
+  <div id="age-gate" class="age-gate">
+
+    <div class="age-gate-box">
+
+      <h1>年齢確認</h1>
+
+      <p>
+        この先には成人向けの内容が含まれます。
+      </p>
+
+      <p>
+        18歳未満の方は閲覧をご遠慮ください。
+      </p>
+
+
+      <button id="age-confirm"
+              class="gacha-button">
+        18歳以上です
+      </button>
+
+
+      <button id="age-decline"
+              class="age-decline">
+        18歳未満です
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==========================
+       小説本文
+  =========================== -->
+
+  <main id="special-content"
+        class="container special-hidden">
 
     <article class="story">
 
@@ -28,24 +66,49 @@
           特別小説タイトル
         </h1>
 
+        <p class="story-page">
+          1 / 2
+        </p>
+
       </header>
 
 
       <section class="story-body">
 
         <p>
-          特別小説の本文。
+          　ここに一ページ目の本文を入れます。
         </p>
 
         <p>
-          ここに続きを書きます。
+          「会話文です」
+        </p>
+
+        <p>
+          　本文の続きです。
+        </p>
+
+        <p>
+          　さらに本文が続きます。
         </p>
 
       </section>
 
+
+      <nav class="story-navigation">
+
+        <a href="special2.html"
+           class="page-button">
+          次のページへ →
+        </a>
+
+      </nav>
+
     </article>
 
   </main>
+
+
+  <script src="js/special.js"></script>
 
 </body>
 

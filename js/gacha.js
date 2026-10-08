@@ -1,9 +1,10 @@
 // ========================================
-// ガチャボタン
+// ガチャ
 // ========================================
 
 const gachaButton =
   document.getElementById("gacha-button");
+
 
 if (gachaButton) {
 
@@ -11,16 +12,6 @@ if (gachaButton) {
     "click",
     function () {
 
-      // stories が存在するか確認
-      if (
-        typeof stories === "undefined" ||
-        stories.length === 0
-      ) {
-        alert("作品データを読み込めませんでした。");
-        return;
-      }
-
-      // ランダム抽選
       const randomIndex =
         Math.floor(
           Math.random() * stories.length
@@ -29,9 +20,9 @@ if (gachaButton) {
       const selectedStory =
         stories[randomIndex];
 
-      // 小説ページへ移動
       window.location.href =
         `story.html?id=${selectedStory.id}`;
+
     }
   );
 
@@ -45,10 +36,8 @@ if (gachaButton) {
 const writersList =
   document.getElementById("writers-list");
 
-if (
-  writersList &&
-  typeof authors !== "undefined"
-) {
+
+if (writersList) {
 
   Object.values(authors).forEach(
     author => {
@@ -61,6 +50,7 @@ if (
 
 
       // 書き手名
+
       const writerName =
         document.createElement("p");
 
@@ -76,6 +66,7 @@ if (
 
 
       // SNS
+
       const snsArea =
         document.createElement("div");
 
@@ -92,10 +83,13 @@ if (
           (sns, index) => {
 
             if (index > 0) {
+
               snsArea.appendChild(
                 document.createTextNode(" / ")
               );
+
             }
+
 
             const link =
               document.createElement("a");
@@ -112,10 +106,15 @@ if (
             link.rel =
               "noopener noreferrer";
 
-            snsArea.appendChild(link);
+            snsArea.appendChild(
+              link
+            );
+
           }
         );
+
       }
+
 
       writerItem.appendChild(
         snsArea
@@ -124,6 +123,8 @@ if (
       writersList.appendChild(
         writerItem
       );
+
     }
   );
+
 }

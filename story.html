@@ -14,57 +14,116 @@
 </head>
 
 
-<body>
+<body class="story-page-body">
 
-  <main class="container">
+
+  <!-- ========================================
+       上部固定ヘッダー
+  ========================================= -->
+
+  <header class="fixed-story-header">
+
+    <div class="fixed-story-header-inner">
+
+      <!-- トップへ戻る -->
+      <div class="fixed-header-top">
+
+        <a href="index.html"
+           class="back-home-button">
+          ← トップに戻る
+        </a>
+
+      </div>
+
+
+      <!-- 作品タイトル -->
+      <h1 id="story-title"
+          class="fixed-story-title">
+      </h1>
+
+
+      <!-- 作品情報 -->
+      <div class="fixed-story-meta">
+
+        <!-- テーマ -->
+        <div class="meta-item">
+
+          <span class="meta-label">
+            Theme
+          </span>
+
+          <span id="story-theme"
+                class="meta-value">
+          </span>
+
+        </div>
+
+
+        <!-- 書き手 -->
+        <div class="meta-item">
+
+          <span class="meta-label">
+            Writer
+          </span>
+
+          <span id="story-author"
+                class="meta-value">
+          </span>
+
+        </div>
+
+
+        <!-- SNS -->
+        <div class="meta-item">
+
+          <span class="meta-label">
+            SNS
+          </span>
+
+          <span id="story-sns"
+                class="story-sns">
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- ========================================
+       小説本文
+  ========================================= -->
+
+  <main class="container story-main">
 
     <article class="story">
 
-      <header class="story-header">
-
-        <h1 id="story-title"></h1>
-
-
-        <dl class="story-info">
-
-          <div>
-            <dt>Theme</dt>
-            <dd id="story-theme"></dd>
-          </div>
-
-          <div>
-            <dt>Writer</dt>
-
-            <dd>
-              <a id="story-author"
-                 href=""
-                 target="_blank"
-                 rel="noopener noreferrer">
-              </a>
-            </dd>
-
-          </div>
-
-        </dl>
-
-      </header>
-
-
-      <section
-        id="story-body"
-        class="story-body">
+      <section id="story-body"
+               class="story-body">
       </section>
 
 
+
+      <!-- ========================================
+           下部ボタン
+      ========================================= -->
+
       <footer class="story-footer">
 
-        <button
-          id="retry-button"
-          class="gacha-button">
-
+        <button id="retry-button"
+                class="gacha-button">
           もう一度引く
-
         </button>
+
+
+        <a href="index.html"
+           class="bottom-home-link">
+          トップに戻る
+        </a>
 
       </footer>
 
@@ -73,7 +132,11 @@
   </main>
 
 
+
+  <!-- data.jsを先に読み込む -->
   <script src="js/data.js"></script>
+
+  <!-- story.jsを後に読み込む -->
   <script src="js/story.js"></script>
 
 </body>

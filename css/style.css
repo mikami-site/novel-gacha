@@ -228,15 +228,15 @@ body {
   line-height: 2.1;
 }
 
+.story-body {
+  font-size: 1rem;
 
-.story-body p {
-  margin:
-    0
-    0
-    2em;
+  line-height: 2.1;
+
+  margin-bottom: 60px;
+
+  white-space: pre-wrap;
 }
-
-
 
 /* ========================================
    フッター

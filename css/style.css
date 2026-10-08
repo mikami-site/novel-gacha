@@ -120,15 +120,15 @@ body {
 }
 
 .writers-title {
-  margin: 0 0 35px;
+  margin: 0 0 20px;
 
   color: #777;
 
-  font-size: 1rem;
+  font-size: 0.7rem;
 
   font-weight: normal;
 
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
 
   text-align: center;
 }
@@ -145,11 +145,11 @@ body {
   justify-content: center;
   align-items: baseline;
 
-  gap: 12px;
+  gap: 10px;
 
-  padding: 8px 0;
+  padding: 6px 0;
 
-  border-bottom: 1px solid #eee;
+  border-bottom: 0.5px solid #eee;
 }
 
 .writer-item:last-child {

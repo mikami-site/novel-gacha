@@ -120,11 +120,11 @@ body {
 }
 
 .writers-title {
-  margin: 0 0 20px;
+  margin: 0 0 25px;
 
   color: #777;
 
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 
   font-weight: normal;
 
@@ -145,9 +145,9 @@ body {
   justify-content: center;
   align-items: baseline;
 
-  gap: 10px;
+  gap: 12px;
 
-  padding: 6px 0;
+  padding: 7px 0;
 
   border-bottom: 0.5px solid #eee;
 }

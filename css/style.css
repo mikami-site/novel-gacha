@@ -140,9 +140,14 @@ body {
 }
 
 .writer-item {
-  padding: 18px 0;
+  display: flex;
 
-  text-align: center;
+  justify-content: center;
+  align-items: baseline;
+
+  gap: 16px;
+
+  padding: 12px 0;
 
   border-bottom: 1px solid #eee;
 }
@@ -152,7 +157,7 @@ body {
 }
 
 .writer-name {
-  margin: 0 0 4px;
+  margin: 0;
 
   font-size: 1rem;
 }

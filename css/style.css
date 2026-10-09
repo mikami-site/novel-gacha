@@ -317,6 +317,10 @@ body {
 
 
 .meta-label {
+  width: 60px;
+
+  flex-shrink: 0;
+
   color: #999;
 
   font-size: 0.75rem;
@@ -325,7 +329,6 @@ body {
 
   letter-spacing: 0.08em;
 }
-
 
 .meta-value {
   color: #444;
@@ -694,7 +697,7 @@ body {
 
 
   .meta-label {
-    width: 52px;
+    width: 60px;
 
     flex-shrink: 0;
   }

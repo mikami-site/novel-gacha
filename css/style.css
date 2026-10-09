@@ -687,36 +687,45 @@ body {
   }
 
 
-  .fixed-story-meta {
-    display: block;
+.fixed-story-meta {
+  display: flex;
 
-    font-size: 0.78rem;
-  }
+  flex-direction: column;
 
+  gap: 4px;
 
-  .meta-item {
-    margin-bottom: 2px;
-  }
-
-
-  .meta-label {
-    width: 60px;
-
-    flex-shrink: 0;
-  }
+  font-size: 0.78rem;
+}
 
 
-  /*
-    WRITER行は
-    必要に応じて折り返す
-  */
-  .author-sns-item {
-    flex-wrap: wrap;
+.meta-item {
+  display: flex;
 
-    column-gap: 12px;
+  align-items: baseline;
 
-    row-gap: 0;
-  }
+  gap: 8px;
+
+  margin-bottom: 0;
+}
+
+
+.meta-label {
+  width: 60px;
+
+  flex-shrink: 0;
+}
+
+
+.author-sns-item {
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+
+.author-sns-item .story-sns {
+  margin-left: 8px;
+}
 
 
 

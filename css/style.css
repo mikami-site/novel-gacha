@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0;
 
@@ -21,6 +22,7 @@ body {
   line-height: 2;
 }
 
+
 .container {
   width: min(90%, 760px);
 
@@ -29,6 +31,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+
 
 
 /* ========================================
@@ -42,11 +45,13 @@ body {
   padding-bottom: 60px;
 }
 
+
 .site-header {
   text-align: center;
 
   margin-bottom: 60px;
 }
+
 
 .site-header h1 {
   margin-top: 0;
@@ -58,6 +63,7 @@ body {
   letter-spacing: 0.15em;
 }
 
+
 .description {
   margin: 0;
 
@@ -66,9 +72,11 @@ body {
   font-size: 0.9rem;
 }
 
+
 .gacha-area {
   text-align: center;
 }
+
 
 .count {
   margin-top: 16px;
@@ -77,6 +85,7 @@ body {
 
   font-size: 0.8rem;
 }
+
 
 
 /* ========================================
@@ -101,9 +110,11 @@ body {
   border-radius: 4px;
 }
 
+
 .gacha-button:hover {
   opacity: 0.8;
 }
+
 
 
 /* ========================================
@@ -119,25 +130,28 @@ body {
   border-top: 1px solid #ddd;
 }
 
+
 .writers-title {
-  margin: 0 0 25px;
+  margin: 0 0 35px;
 
   color: #777;
 
-  font-size: 0.9rem;
+  font-size: 1rem;
 
   font-weight: normal;
 
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
 
   text-align: center;
 }
+
 
 .writers-list {
   width: min(100%, 500px);
 
   margin: 0 auto;
 }
+
 
 .writer-item {
   display: flex;
@@ -147,14 +161,16 @@ body {
 
   gap: 12px;
 
-  padding: 7px 0;
+  padding: 8px 0;
 
-  border-bottom: 0.5px solid #eee;
+  border-bottom: 1px solid #eee;
 }
+
 
 .writer-item:last-child {
   border-bottom: none;
 }
+
 
 .writer-name {
   margin: 0;
@@ -162,11 +178,13 @@ body {
   font-size: 0.9rem;
 }
 
+
 .writer-sns {
   color: #888;
 
   font-size: 0.72rem;
 }
+
 
 .writer-sns a {
   color: #666;
@@ -176,9 +194,11 @@ body {
   text-underline-offset: 3px;
 }
 
+
 .writer-sns a:hover {
   color: #222;
 }
+
 
 
 /* ========================================
@@ -201,6 +221,7 @@ body {
   z-index: 1000;
 }
 
+
 .fixed-story-header-inner {
   width: min(90%, 900px);
 
@@ -208,6 +229,7 @@ body {
 
   padding: 14px 20px 16px;
 }
+
 
 
 /* ========================================
@@ -219,6 +241,7 @@ body {
   margin-bottom: 6px;
 }
 
+
 .back-home-button {
   display: inline-block;
 
@@ -229,11 +252,13 @@ body {
   text-decoration: none;
 }
 
+
 .back-home-button:hover {
   color: #333;
 
   text-decoration: underline;
 }
+
 
 
 /* ========================================
@@ -254,6 +279,7 @@ body {
 }
 
 
+
 /* ========================================
    固定ヘッダー
    作品情報
@@ -271,6 +297,7 @@ body {
   line-height: 1.7;
 }
 
+
 .meta-item {
   display: flex;
 
@@ -278,6 +305,16 @@ body {
 
   gap: 8px;
 }
+
+
+/*
+  WRITER 作者名 X / bsky
+  の間隔を少し広めにする
+*/
+.author-sns-item {
+  gap: 16px;
+}
+
 
 .meta-label {
   color: #999;
@@ -289,18 +326,24 @@ body {
   letter-spacing: 0.08em;
 }
 
+
 .meta-value {
   color: #444;
 }
 
-.author-sns-item {
-  gap: 16px;
-}
+
 
 /* ========================================
    小説ページ
    SNS
 ======================================== */
+
+.story-sns {
+  color: #888;
+
+  font-size: 0.8rem;
+}
+
 
 .story-sns a {
   color: #666;
@@ -310,9 +353,11 @@ body {
   text-underline-offset: 3px;
 }
 
+
 .story-sns a:hover {
   color: #222;
 }
+
 
 
 /* ========================================
@@ -323,11 +368,13 @@ body {
   padding-top: 180px;
 }
 
+
 .story-main {
   padding-top: 40px;
 
   padding-bottom: 70px;
 }
+
 
 
 /* ========================================
@@ -343,6 +390,7 @@ body {
 }
 
 
+
 /* ========================================
    小説本文
 ======================================== */
@@ -355,11 +403,12 @@ body {
   line-height: 2.1;
 
   /*
-    data.js内の改行を
+    data.js内の改行・空白を
     そのまま表示する
   */
   white-space: pre-wrap;
 }
+
 
 
 /* ========================================
@@ -375,6 +424,7 @@ body {
 
   text-align: center;
 }
+
 
 .bottom-home-link {
   display: block;
@@ -393,6 +443,7 @@ body {
 }
 
 
+
 /* ========================================
    エラー表示
 ======================================== */
@@ -402,6 +453,7 @@ body {
 
   text-align: center;
 }
+
 
 
 /* ========================================
@@ -430,6 +482,7 @@ body {
   z-index: 9999;
 }
 
+
 .age-gate-box {
   width: min(100%, 500px);
 
@@ -442,6 +495,7 @@ body {
   text-align: center;
 }
 
+
 .age-gate-box h1 {
   margin-top: 0;
 
@@ -450,9 +504,11 @@ body {
   font-size: 1.6rem;
 }
 
+
 .age-gate-box p {
   margin-bottom: 15px;
 }
+
 
 .age-decline {
   display: block;
@@ -472,9 +528,11 @@ body {
   text-decoration: underline;
 }
 
+
 .special-hidden {
   display: none;
 }
+
 
 
 /* ========================================
@@ -489,6 +547,7 @@ body {
 
   font-size: 0.85rem;
 }
+
 
 
 /* ========================================
@@ -510,6 +569,7 @@ body {
   border-top: 1px solid #ddd;
 }
 
+
 .page-button {
   display: inline-block;
 
@@ -524,13 +584,16 @@ body {
   border-radius: 4px;
 }
 
+
 .page-button:hover {
   opacity: 0.8;
 }
 
+
 .page-button.secondary {
   background: #666;
 }
+
 
 
 /* ========================================
@@ -538,6 +601,7 @@ body {
 ======================================== */
 
 @media (max-width: 600px) {
+
 
   /* --------------------
      共通
@@ -551,6 +615,7 @@ body {
   }
 
 
+
   /* --------------------
      トップページ
   -------------------- */
@@ -561,13 +626,16 @@ body {
     padding-bottom: 30px;
   }
 
+
   .site-header {
     margin-bottom: 40px;
   }
 
+
   .site-header h1 {
     font-size: 1.6rem;
   }
+
 
   .writers-section {
     margin-top: 50px;
@@ -575,13 +643,20 @@ body {
     padding-top: 35px;
   }
 
-   .writer-item {
-  flex-wrap: wrap;
 
-  column-gap: 12px;
+  /*
+    名前が長い場合だけ
+    SNSを折り返せるようにする
+  */
+  .writer-item {
+    flex-wrap: wrap;
 
-  row-gap: 2px;
-}
+    column-gap: 12px;
+
+    row-gap: 2px;
+  }
+
+
 
   /* --------------------
      固定ヘッダー
@@ -591,11 +666,13 @@ body {
     padding-top: 220px;
   }
 
+
   .fixed-story-header-inner {
     width: 100%;
 
     padding: 10px 16px 12px;
   }
+
 
   .fixed-story-title {
     margin-bottom: 7px;
@@ -603,21 +680,38 @@ body {
     font-size: 1.2rem;
   }
 
+
   .fixed-story-meta {
     display: block;
 
     font-size: 0.78rem;
   }
 
+
   .meta-item {
     margin-bottom: 2px;
   }
+
 
   .meta-label {
     width: 52px;
 
     flex-shrink: 0;
   }
+
+
+  /*
+    WRITER行は
+    必要に応じて折り返す
+  */
+  .author-sns-item {
+    flex-wrap: wrap;
+
+    column-gap: 12px;
+
+    row-gap: 0;
+  }
+
 
 
   /* --------------------
@@ -630,9 +724,11 @@ body {
     padding-bottom: 40px;
   }
 
+
   .story {
     padding: 35px 22px;
   }
+
 
   .story-body {
     font-size: 0.95rem;
@@ -640,9 +736,11 @@ body {
     line-height: 2;
   }
 
+
   .story-footer {
     margin-top: 50px;
   }
+
 
 
   /* --------------------
@@ -652,6 +750,7 @@ body {
   .age-gate-box {
     padding: 35px 20px;
   }
+
 
 
   /* --------------------

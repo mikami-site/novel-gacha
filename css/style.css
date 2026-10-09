@@ -288,9 +288,9 @@ body {
 .fixed-story-meta {
   display: flex;
 
-  flex-wrap: wrap;
+  flex-direction: column;
 
-  gap: 4px 24px;
+  gap: 4px;
 
   font-size: 0.82rem;
 
@@ -312,9 +312,12 @@ body {
   の間隔を少し広めにする
 */
 .author-sns-item {
-  gap: 16px;
+  gap: 8px;
 }
 
+.author-sns-item .story-sns {
+  margin-left: 8px;
+}
 
 .meta-label {
   width: 60px;

@@ -113,11 +113,11 @@ const authors = {
     sns: [
       {
         name: "X",
-        url: "https://x.com/xxx"
+        url: "https://x.com/64giKl"
       },
       {
         name: "bsky",
-        url: "https://bsky.app/profile/xxx.bsky.social"
+        url: "https://bsky.app/profile/hanao64gikl.bsky.social"
       }
     ]
   },  

@@ -115,7 +115,6 @@ else {
     );
 
 
-  // SNS登録がある場合
   if (
     author.sns &&
     author.sns.length > 0
@@ -124,7 +123,7 @@ else {
     author.sns.forEach(
       (sns, index) => {
 
-        // 2個目以降の前に「 / 」を表示
+        // 2個目以降の前に「 / 」
         if (index > 0) {
 
           const separator =
@@ -139,12 +138,11 @@ else {
         }
 
 
-        // SNSリンク作成
+        // SNSリンク
         const link =
           document.createElement(
             "a"
           );
-
 
         link.textContent =
           sns.name;
@@ -168,7 +166,6 @@ else {
 
   }
 
-  // SNS登録なし
   else {
 
     snsArea.textContent =
@@ -182,12 +179,63 @@ else {
   // 本文
   // --------------------------------------
 
-document.getElementById(
-  "story-body"
-).textContent =
-  story.body
-    .replace(/^\r?\n/, "")
-    .trimEnd();
+  /*
+    data.jsでは、
+
+    body: `
+    　本文……
+    `
+
+    のように書いているため、
+
+    ・最初の改行だけ削除
+    ・最初の全角スペースは残す
+    ・末尾の余分な改行は削除
+
+    という処理にしている
+  */
+
+  document.getElementById(
+    "story-body"
+  ).textContent =
+    story.body
+      .replace(/^\r?\n/, "")
+      .trimEnd();
+
+
+
+  // --------------------------------------
+  // 現在の作品を「引いた作品」に記録
+  // --------------------------------------
+
+  let drawnStories =
+    JSON.parse(
+      sessionStorage.getItem(
+        "drawnStories"
+      )
+    ) || [];
+
+
+  if (
+    !drawnStories.includes(
+      storyId
+    )
+  ) {
+
+    drawnStories.push(
+      storyId
+    );
+
+    sessionStorage.setItem(
+      "drawnStories",
+      JSON.stringify(
+        drawnStories
+      )
+    );
+
+  }
+
+}
 
 
 
@@ -216,7 +264,9 @@ if (
 
       let drawnStories =
         JSON.parse(
-          sessionStorage.getItem("drawnStories")
+          sessionStorage.getItem(
+            "drawnStories"
+          )
         ) || [];
 
 
@@ -225,7 +275,9 @@ if (
       // ------------------------------------
 
       if (
-        !drawnStories.includes(storyId)
+        !drawnStories.includes(
+          storyId
+        )
       ) {
 
         drawnStories.push(
@@ -236,18 +288,20 @@ if (
 
 
       // ------------------------------------
-      // 未抽選作品だけ取り出す
+      // まだ引いていない作品だけを取得
       // ------------------------------------
 
       let availableStories =
         stories.filter(
           item =>
-            !drawnStories.includes(item.id)
+            !drawnStories.includes(
+              item.id
+            )
         );
 
 
       // ------------------------------------
-      // 全作品引き終わった場合
+      // 全作品を引き終わった場合
       // 履歴をリセット
       // ------------------------------------
 
@@ -255,11 +309,14 @@ if (
         availableStories.length === 0
       ) {
 
-        sessionStorage.removeItem(
-          "drawnStories"
-        );
-
         drawnStories = [];
+
+
+        /*
+          リセット直後に
+          今表示している作品が
+          もう一度出るのを防ぐ
+        */
 
         availableStories =
           stories.filter(
@@ -282,11 +339,13 @@ if (
 
 
       const selectedStory =
-        availableStories[randomIndex];
+        availableStories[
+          randomIndex
+        ];
 
 
       // ------------------------------------
-      // 新しく引いた作品を記録
+      // 新しく引いた作品を履歴に追加
       // ------------------------------------
 
       drawnStories.push(
@@ -296,12 +355,14 @@ if (
 
       sessionStorage.setItem(
         "drawnStories",
-        JSON.stringify(drawnStories)
+        JSON.stringify(
+          drawnStories
+        )
       );
 
 
       // ------------------------------------
-      // 選ばれた作品へ
+      // 選ばれた作品へ移動
       // ------------------------------------
 
       window.location.href =

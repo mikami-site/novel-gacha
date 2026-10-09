@@ -182,12 +182,12 @@ else {
   // 本文
   // --------------------------------------
 
-  document.getElementById(
-　  "story-body"
-　).textContent =
-　  story.body.trim();
-
-}
+document.getElementById(
+  "story-body"
+).textContent =
+  story.body
+    .replace(/^\r?\n/, "")
+    .trimEnd();
 
 
 
